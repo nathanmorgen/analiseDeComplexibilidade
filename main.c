@@ -45,7 +45,7 @@ int main(void){
     //estas irao receber os tempos pico das rodadas
     clock_t maior, menor;
     printf("Teste para o Bubble Sort\n\n");
-    for(int i = 10; i <= 10000; i=i*10){
+    for(int i = 10; i <= 1000000; i=i*10){
         for(int j = 0; j < 10; j++){
             
             int* vetor = criaVetor(i);
@@ -79,20 +79,20 @@ int main(void){
             free(vetor);
         }
         aux = aux/10;
-        printf("O tempo de medio de execucao para vetores de tamanho %d foi de %lf ms.\n", i,(double)aux*10);
+        printf("O tempo medio de execucao para vetores de tamanho %d foi de %lf ms.\n", i,(double)aux*10);
         aux = 0;
     }
     printf("\n");
     maiorMenor(v10, 10, &menor, &maior);
-    printf("Diferenca entre o maior e o menor tempo de execucao das 10 rodadas: %lf ms.\n", (double)(maior-menor));
+    printf("Diferenca entre o maior e o menor tempo de execucao das 10 rodadas do vetor de tamanho 10: %lf ms.\n", (double)(maior-menor));
     maiorMenor(v100, 10, &menor, &maior);
-    printf("Diferenca entre o maior e o menor tempo de execucao das 10 rodadas: %lf ms.\n", (double)(maior-menor));
+    printf("Diferenca entre o maior e o menor tempo de execucao das 10 rodadas do vetor de tamanho 100: %lf ms.\n", (double)(maior-menor));
     maiorMenor(v1000, 10, &menor, &maior);
-    printf("Diferenca entre o maior e o menor tempo de execucao das 10 rodadas: %lf ms.\n", (double)(maior-menor));
+    printf("Diferenca entre o maior e o menor tempo de execucao das 10 rodadas do vetor de tamanho 1000: %lf ms.\n", (double)(maior-menor));
     maiorMenor(v10000, 10, &menor, &maior);
-    printf("Diferenca entre o maior e o menor tempo de execucao das 10 rodadas: %lf ms.\n", (double)(maior-menor));
+    printf("Diferenca entre o maior e o menor tempo de execucao das 10 rodadas do vetor de tamanho 10000: %lf ms.\n", (double)(maior-menor));
     maiorMenor(v100000, 10, &menor, &maior);
-    printf("Diferenca entre o maior e o menor tempo de execucao das 10 rodadas: %lf ms.\n", (double)(maior-menor));
+    printf("Diferenca entre o maior e o menor tempo de execucao das 10 rodadas do vetor de tamanho 100000: %lf ms.\n", (double)(maior-menor));
     maiorMenor(v1000000, 10, &menor, &maior);
-    printf("Diferenca entre o maior e o menor tempo de execucao das 10 rodadas: %lf ms.\n", (double)(maior-menor));
+    printf("Diferenca entre o maior e o menor tempo de execucao das 10 rodadas do vetor de tamanho 1000000: %lf ms.\n", (double)(maior-menor));
 }
