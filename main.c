@@ -45,7 +45,7 @@ int main(void){
     //estas irao receber os tempos pico das rodadas
     clock_t maior, menor;
     printf("Teste para o Bubble Sort\n\n");
-    for(int i = 10; i <= 1000000; i=i*10){
+    for(int i = 10; i <= 10000; i=i*10){
         for(int j = 0; j < 10; j++){
             
             int* vetor = criaVetor(i);
@@ -78,7 +78,8 @@ int main(void){
             tempo = 0;
             free(vetor);
         }
-        printf("O tempo de medio de execucao para vetores de tamanho %d foi de %lf ms.\n", i,((double)aux/10)/CLOCKS_PER_SEC);
+        aux = aux/10;
+        printf("O tempo de medio de execucao para vetores de tamanho %d foi de %lf ms.\n", i,(double)aux*10);
         aux = 0;
     }
     printf("\n");
@@ -95,4 +96,3 @@ int main(void){
     maiorMenor(v1000000, 10, &menor, &maior);
     printf("Diferenca entre o maior e o menor tempo de execucao das 10 rodadas: %lf ms.\n", (double)(maior-menor));
 }
- 
