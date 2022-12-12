@@ -44,15 +44,15 @@ int main(void){
     clock_t* v1000000 = malloc(10*sizeof(clock_t));
     //estas irao receber os tempos pico das rodadas
     clock_t maior, menor;
-    printf("Teste para o Bubble Sort\n\n");
+    printf("\n\n");
     for(int i = 10; i <= 1000000; i=i*10){
         for(int j = 0; j < 10; j++){
             
             int* vetor = criaVetor(i);
             tempo = clock();//tempo inicial
             //aqui eu simplesmente troquei a funcao para cada teste e compilei, para evitar aumentar a complexidade do codigo.
-            bubblesort(vetor, i);
-            //mergeSort(vetor, 0, i-1);
+            //insertionSort(vetor, i);
+            quickSort(vetor, 0, i-1);
             tempo = clock() - tempo;//tempo inicial menos o tempo final nos da o tempo que o processo levou para ser concluido.
             //para cada tamanho de vetor o tempo sera armazenado em outro vetor
             if(i == 10){
